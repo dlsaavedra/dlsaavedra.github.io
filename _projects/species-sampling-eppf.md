@@ -19,15 +19,17 @@ X_{ji}\mid G_j\overset{\mathrm{iid}}{\sim}G_j,
 \phi_{jh}\overset{\mathrm{iid}}{\sim}G_{0j}.
 $$
 
-Assume the base distributions \\(G_{0j}\\) have no atoms and the weight vectors follow a common family indexed by \\((\alpha,d)\\). Repeated values then induce a partition \\(\Pi_{j,n_j}\\) of the \\(n_j\\) observations into \\(K_j\\) clusters. If their sizes are \\(n_{j1},\ldots,n_{jK_j}\\), the **exchangeable partition probability function (EPPF)** assigns the probability of a particular partition using only those sizes:
+Assume the base distributions \\(G_{0j}\\) have no atoms and the weight vectors follow a common family \\(\mathcal{F}\\). 
+Repeated values then induce a partition \\(\Pi_{j,n_j}\\) of the \\(n_j\\) observations into \\(K_j\\) clusters. If their sizes are \\(n_{j1},\ldots,n_{jK_j}\\), the **exchangeable partition probability function (EPPF)** assigns the probability of a particular partition using only those sizes:
 
 $$
 p_{\alpha,d}(n_{j1},\ldots,n_{jK_j})
-=\Pr\!\left(\Pi_{j,n_j}=\{A_{j1},\ldots,A_{jK_j}\}\mid\alpha,d\right),
+=\Pr\!\left(\Pi_{j,n_j}=\{A_{j1},\ldots,A_{jK_j}\}\mid\mathcal{F}\right),
 \qquad n_{jh}=|A_{jh}|.
 $$
 
-The proposed direction is to study and estimate the behavior of a family of EPPFs indexed by shared diversity and concentration parameters \\((\alpha,d)\\). The EPPF also answers predictive questions. For example, the probability that the next observation forms a new cluster is
+The proposed direction is to study and estimate the behavior of a family \\(\mathcal{F}\\) of EPPFs indexed by shared parameter, like as in Pitman-Yorr process where the EPPF is determined by the diversity and concentration parameters \\((\alpha,d)\\). 
+The EPPF also answers predictive questions. For example, the probability that the next observation forms a new cluster is
 
 $$
 \Pr(\text{new cluster}\mid n_{j1},\ldots,n_{jK_j},\alpha,d)
@@ -35,7 +37,8 @@ $$
 {p_{\alpha,d}(n_{j1},\ldots,n_{jK_j})}.
 $$
 
-This framework is especially useful when collections have **different category identities but share a common pattern of diversity and concentration**. The sizes of the clusters matter more than their labels. The base distributions \\(G_{0j}\\) may describe different possible categories in each collection, while \\((\alpha,d)\\) governs a common partition structure.
+This framework is especially useful when collections have **different category identities but share a common pattern of diversity and concentration**. 
+The sizes of the clusters matter more than their labels. The base distributions \\(G_{0j}\\) may describe different possible categories in each collection, while a particular **\\(f \in \mathcal{F}\\) governs a common partition structure.
 
 <div class="table-responsive" markdown="1">
 

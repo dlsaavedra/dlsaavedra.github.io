@@ -26,7 +26,7 @@ Y_i=q_\tau(x_i)+\varepsilon_i,
 \qquad
 \Pr(\varepsilon_i\leq 0\mid x_i)=\tau,
 \qquad
-f_{\varepsilon\mid x}(e)=\int k(e\mid\vartheta,x)\,dG_x(\vartheta).
+f_{\varepsilon\mid x}(e)=f.
 $$
 
 The quantile constraint is imposed on the flexible error model. This makes it possible to study both the quantile curve and the conditional spread, including

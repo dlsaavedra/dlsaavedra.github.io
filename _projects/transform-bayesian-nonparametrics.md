@@ -9,13 +9,15 @@ importance: 1
 
 <figure class="text-center"><img src="{{ '/assets/img/projects/transform-bnp-heavy-tails.png' | relative_url }}" alt="Heavy-tailed observations mapped to a smoother latent distribution and back" class="img-fluid rounded" style="width: 100%; max-width: 520px;"></figure>
 
-Heavy-tailed observations are often difficult to describe with conventional light-tailed kernels on their original scale. This project investigates a **data-adaptive, monotone, invertible transformation** that moves observations into a more regular latent space. In that space, a Dirichlet process (DP) mixture with simple normal kernels can describe the distribution without requiring a complicated kernel for every extreme observation.
-
+Heavy-tailed observations are often difficult to describe with conventional light-tailed kernels on their original scale. 
+This project investigates a **data-adaptive, monotone, invertible transformation** that moves observations into a more regular latent space. 
+In this setting, we can take advantage of a wide range of light-tailed models. Bayesian non-parametric approaches are particularly attractive due to their flexibility. 
+For example, a Dirichlet Process Mixture Model (DPMM) with standard Gaussian kernels can accurately capture the distribution without resorting to overly complex kernels for extreme observations.
 Let \\(T_\eta\\) be the transformation learned from the data. The working model is
 
 $$
 z_i=T_\eta(x_i), \qquad
-f_Z(z)=\int \phi(z;\mu,\sigma^2)\,G(d\mu,d\sigma^2),
+f_Z(z)=\int \mathcal{K}(z;\phi)\,G(d\phi),
 \qquad G\sim\operatorname{DP}(a,G_0).
 $$
 
