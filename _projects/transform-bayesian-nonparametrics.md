@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Transform Bayesian Nonparametrics for Heavy-Tailed Distributions
+card_title: Transform BNP for Heavy Tails
 description: A learned transformation makes heavy-tailed data easier to model with simple Gaussian mixtures.
 img: assets/img/projects/transform-bnp-heavy-tails.png
 importance: 1
@@ -10,7 +11,7 @@ importance: 1
 
 Heavy-tailed observations are often difficult to describe with conventional light-tailed kernels on their original scale. This project investigates a **data-adaptive, monotone, invertible transformation** that moves observations into a more regular latent space. In that space, a Dirichlet process (DP) mixture with simple normal kernels can describe the distribution without requiring a complicated kernel for every extreme observation.
 
-Let \(T_\eta\) be the transformation learned from the data. The working model is
+Let \\(T_\eta\\) be the transformation learned from the data. The working model is
 
 $$
 z_i=T_\eta(x_i), \qquad
