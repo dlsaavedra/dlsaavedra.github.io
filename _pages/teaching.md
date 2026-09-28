@@ -1,12 +1,32 @@
 ---
 layout: page
 permalink: /teaching/
-title: teaching
-description: Materials for courses you taught. Replace this text with your description.
+title: Teaching
+description: Courses taught and teaching assistantships
 nav: true
-nav_order: 5
+nav_order: 4
 ---
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
+## Courses taught
 
-Organize your courses by years, topics, or universities, however you like!
+Each course links to a page for its PDF materials.
+
+{% assign courses = site.courses | sort: 'order' %}
+<ul>
+{% for course in courses %}
+  <li><a href="{{ course.url | relative_url }}">{{ course.title }}</a> — {{ course.institution }} ({{ course.period }})</li>
+{% endfor %}
+</ul>
+
+## Teaching assistantships
+
+Pontificia Universidad Católica de Chile, Schools of Engineering and Mathematics (2014–2019):
+
+- Calculus
+- Differential Equations
+- Probabilistic Models
+- Statistical Inference
+- Stochastic Models
+- Image Processing
+- Pattern Recognition
+- Specialization Project

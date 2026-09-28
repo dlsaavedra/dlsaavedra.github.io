@@ -1,0 +1,16 @@
+{% assign course_folder = '/assets/pdf/courses/' | append: include.slug | append: '/' %}
+{% assign pdf_count = 0 %}
+{% capture pdf_links %}
+  {% for file in site.static_files %}
+    {% if file.path contains course_folder and file.extname == '.pdf' %}
+      {% assign pdf_count = pdf_count | plus: 1 %}
+      {% assign filename = file.path | split: '/' | last %}
+      <li><a href="{{ file.path | relative_url }}">{{ filename | replace: '-', ' ' }}</a></li>
+    {% endif %}
+  {% endfor %}
+{% endcapture %}
+{% if pdf_count > 0 %}
+<ul>{{ pdf_links }}</ul>
+{% else %}
+<p>PDF materials will be added here.</p>
+{% endif %}

@@ -158,9 +158,7 @@ disqus_shortname: al-folio # put your disqus shortname
 # External sources.
 # If you have blog posts published on medium.com or other external sources,
 # you can display them in your blog by adding a link to the RSS feed.
-external_sources:
-  - name: medium.com
-    rss_url: https://medium.com/@al-folio/feed
+external_sources: []
 
 # -----------------------------------------------------------------------------
 # Collections
@@ -172,9 +170,9 @@ collections:
       layout: post
     output: true
     permalink: /news/:path/
-  projects:
+  courses:
     output: true
-    permalink: /projects/:path/
+    permalink: /teaching/:path/
 
 announcements:
   enabled: true
@@ -366,8 +364,6 @@ enable_tooltips:            false  # enables automatic tooltip links generated
 enable_darkmode:            true   # enables switching between light/dark modes
 enable_navbar_social:       false  # enables displaying social links in the
                                    # navbar on the about page
-enable_project_categories:  true   # enables categorization of projects into
-                                   # multiple categories
 enable_medium_zoom:         true   # enables image zoom feature (as on medium.com)
 enable_progressbar:         true   # enables a horizontal progress bar linked to the vertical scroll position
 
@@ -417,7 +413,6 @@ jsonresume:
   - work
   - education
   - publications
-  - projects
   - volunteer
   - awards
   - certificates
