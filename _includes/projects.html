@@ -1,5 +1,4 @@
 <!-- _includes/projects.html -->
-<div class="grid-sizer"></div>
 <div class="grid-item">
   {% if project.redirect -%}
   <a href="{{ project.redirect }}">
@@ -10,10 +9,10 @@
         {%- if project.img %}
         {%- include figure.html
           path=project.img
-          alt="project thumbnail" -%}
+          alt=project.title -%}
         {%- endif %}
         <div class="card-body">
-          <h2 class="card-title text-lowercase">{{ project.title }}</h2>
+          <h2 class="card-title">{{ project.title }}</h2>
           <p class="card-text">{{ project.description }}</p>
           <div class="row ml-1 mr-1 p-0">
             {%- if project.github -%}

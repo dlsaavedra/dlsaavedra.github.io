@@ -545,6 +545,11 @@ footer.sticky-bottom {
   }
 }
 
+.projects.current-projects .card img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
 
 // Publications
 
