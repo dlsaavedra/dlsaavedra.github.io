@@ -38,13 +38,19 @@ module Jekyll
           add_folder_page(site, course_path, url_parts, title, details,
                           [{ 'name' => 'Teaching', 'url' => '/teaching/' }])
         end
-        catalog.fetch(category).sort_by! { |course| course.fetch('title').downcase }
+        catalog.fetch(category).sort_by! do |course|
+          [-latest_semester(course.fetch('details')), course.fetch('title').downcase]
+        end
       end
 
       site.data['teaching_courses'] = catalog
     end
 
     private
+
+    def latest_semester(details)
+      details.scan(/\b\d{4}-(?:01|02)\b/).max.to_s.delete('-').to_i
+    end
 
     def description_for(course_path, folder_name)
       text = File.read(File.join(course_path, 'descript.txt'), encoding: 'UTF-8')
