@@ -26,52 +26,6 @@ body.sticky-bottom-footer {
   max-width: $max-content-width;
 }
 
-// Keep the photographs in the space beside the reading column.
-.side-gallery {
-  display: none;
-}
-
-@media (min-width: 1200px) {
-  .page-with-gallery {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, $max-content-width) minmax(0, 1fr);
-    column-gap: clamp(18px, 2.5vw, 42px);
-    align-items: start;
-    padding-inline: clamp(12px, 2vw, 32px);
-  }
-
-  .page-with-gallery > .container {
-    width: 100%;
-    min-width: 0;
-  }
-
-  .side-gallery {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    width: 100%;
-    max-width: 220px;
-    margin-top: 3rem;
-  }
-
-  .side-gallery-left {
-    justify-self: end;
-  }
-
-  .side-gallery-right {
-    justify-self: start;
-  }
-
-  .side-gallery img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border: 1px solid var(--global-divider-color);
-    border-radius: 8px;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
-  }
-}
-
 // Profile
 .profile {
   img {
