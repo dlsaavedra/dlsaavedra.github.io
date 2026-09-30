@@ -1,5 +1,7 @@
 # Copia esta carpeta dentro de conferences, seminars, attendance o posters.
 # Cambia estos datos y coloca el PDF en esta carpeta; solo para attendance es opcional.
+# Si el archivo es una imagen JPG, PNG o WebP, usa file: en vez de pdf:.
 event: "Nombre de la conferencia, seminario o institución"
 title: "Título de la presentación, póster o participación"
+# date: "AAAA-MM-DD"  # Fecha del evento; por ejemplo, "2026-09-30".
 pdf: "presentacion.pdf"

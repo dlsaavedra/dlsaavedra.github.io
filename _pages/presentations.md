@@ -15,7 +15,7 @@ nav_order: 5
 
 {% include presentation_section.html category='seminars' %}
 
-## Asistencia en Escuelas/congresos
+## Attendance at Schools and Conferences
 
 {% include presentation_section.html category='attendance' %}
 
