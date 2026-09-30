@@ -1,0 +1,5 @@
+# Copia esta carpeta dentro de conferences, seminars, attendance o posters.
+# Cambia estos datos y coloca el PDF en esta carpeta; solo para attendance es opcional.
+event: "XV Summer School on Computer Intelligence EVIC 2019"
+title: "Detection of Dangerous Object on Baggage Inspection using Deep Learning in X-ray images"
+pdf: "Poster_Evic.pdf"
