@@ -15,8 +15,16 @@
     <!-- Header -->
     {%- include header.html %}
 
-    <!-- Content -->
-    <div class="container mt-5">
+    <!-- Content and side photographs -->
+    <div class="page-with-gallery">
+      <aside class="side-gallery side-gallery-left" aria-label="Photographs">
+        <img src="{{ '/img_back/Img2.jpeg' | relative_url }}" alt="Daniel in front of a university building" loading="lazy">
+        <img src="{{ '/img_back/Img3.jpeg' | relative_url }}" alt="Colourful mural with wildlife and plants" loading="lazy">
+        <img src="{{ '/img_back/Img5.jpeg' | relative_url }}" alt="View over a city from the mountains" loading="lazy">
+        <img src="{{ '/img_back/Img7.jpeg' | relative_url }}" alt="Mountain range beneath a clear blue sky" loading="lazy">
+      </aside>
+
+      <div class="container mt-5">
       {% if page.toc and page.toc.sidebar %}
         {% if page.toc.sidebar == "right" %}
         <div class="row">
@@ -44,6 +52,13 @@
       {% else %}
         {{ content }}
       {% endif %}
+      </div>
+
+      <aside class="side-gallery side-gallery-right" aria-label="More photographs">
+        <img src="{{ '/img_back/Img1.jpeg' | relative_url }}" alt="Path through a green woodland" loading="lazy">
+        <img src="{{ '/img_back/Img4.jpeg' | relative_url }}" alt="Mountain landscape with trees and a river" loading="lazy">
+        <img src="{{ '/img_back/Img6.jpeg' | relative_url }}" alt="Mountain valley at dusk" loading="lazy">
+      </aside>
     </div>
 
     <!-- Footer -->
