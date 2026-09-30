@@ -1,5 +1,5 @@
-# Copia esta carpeta dentro de conferences, seminars, invited-talks o posters.
-# Cambia estos datos y coloca el PDF en esta misma carpeta.
+# Copia esta carpeta dentro de conferences, seminars, attendance o posters.
+# Cambia estos datos y coloca el PDF en esta carpeta; solo para attendance es opcional.
 event: "Seminario de Estudiantes de Doctorado 2025"
 title: "Distributed Computation for Marginal Likelihood based Model Choice"
 pdf: "Presentation_Marginal.pdf"
