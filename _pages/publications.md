@@ -18,4 +18,4 @@ These works are listed in my [ORCID record](https://orcid.org/0000-0002-5084-684
 ## Software and thesis
 
 - **rcens: Generate Sample Censoring**. R package listed on ORCID (2024). [CRAN](https://cran.r-project.org/package=rcens) · [DOI: 10.32614/CRAN.package.rcens](https://doi.org/10.32614/CRAN.package.rcens).
-- **Detección de objetos peligrosos en equipaje usando técnicas de deep learning en imágenes de rayos x**. Thesis. [DOI: 10.7764/tesisuc/ing/65150](https://doi.org/10.7764/tesisuc/ing/65150).
+- **Detecting dangerous objects in baggage using deep learning techniques in X-ray images** (English translation of the thesis title). [DOI: 10.7764/tesisuc/ing/65150](https://doi.org/10.7764/tesisuc/ing/65150).

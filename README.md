@@ -1,96 +1,96 @@
-# Sitio académico de Daniel Saavedra Morales
+# Daniel Saavedra Morales — Academic Website
 
-Código fuente de [dlsaavedra.github.io](https://dlsaavedra.github.io/), un sitio académico creado con [Jekyll](https://jekyllrb.com/) a partir del tema [al-folio](https://github.com/alshedivat/al-folio). El contenido público se genera desde este repositorio y se publica mediante GitHub Pages.
+Source code for [dlsaavedra.github.io](https://dlsaavedra.github.io/), an academic website built with [Jekyll](https://jekyllrb.com/) and based on the [al-folio](https://github.com/alshedivat/al-folio) theme. GitHub Pages hosts the published site.
 
-## Qué encontrarás en la web
+## What you will find on the website
 
-| Pestaña | Contenido |
+| Section | Content |
 | --- | --- |
-| **Home** | Biografía, intereses de investigación, fotografía y enlaces académicos. |
-| **CV** | Vista del currículum en la página y enlace al PDF original. |
-| **Publications** | Lista de publicaciones y enlace al perfil ORCID. |
-| **Repositories** | Selección de repositorios públicos de GitHub y paquetes de R. |
-| **Current Projects** | Tres proyectos de investigación con imágenes, descripciones y formulaciones matemáticas. |
-| **Presentations** | Enlaces a presentaciones en PDF. Aparecen cuando se añaden archivos a la carpeta correspondiente. |
-| **Teaching** | Cursos impartidos, sus páginas de materiales en PDF y ayudantías realizadas. |
+| **Home** | Biography, research interests, profile photo, and academic links. |
+| **CV** | An on-page CV preview and a link to the original PDF. |
+| **Publications** | A publication list and a link to the ORCID record. |
+| **Repositories** | Selected public GitHub repositories and R packages. |
+| **Current Projects** | Three research projects with images, descriptions, and mathematical formulations. |
+| **Presentations** | Links to presentation PDFs, displayed when files are added to the corresponding folder. |
+| **Teaching** | Courses taught, course pages with PDF materials, and teaching assistantships. |
 
-## Dónde está cada cosa
+## Repository guide
 
-| Ruta | Función |
+| Path | Purpose |
 | --- | --- |
-| `_config.yml` | Nombre, URL, correo, redes, ORCID y configuración general. |
-| `_pages/` | Contenido de las pestañas principales. |
-| `_courses/` | Una página por curso, con sus datos y enlace a materiales. |
-| `_projects/` | Una página por proyecto de investigación. |
-| `_includes/`, `_layouts/`, `_sass/` | Componentes, plantillas y estilos del sitio. |
-| `assets/img/` | Fotografía, imágenes de proyectos y vistas previas del CV. |
-| `assets/pdf/daniel-saavedra-cv.pdf` | CV descargable. |
-| `assets/pdf/presentations/` | Presentaciones: cada PDF añadido aparece en **Presentations**. |
-| `assets/pdf/courses/<course_slug>/` | Materiales: cada PDF añadido aparece en la página del curso correspondiente. |
-| `.github/workflows/deploy.yml` | Compilación y publicación automática en la rama `gh-pages`. |
+| `_config.yml` | Name, site URL, email, social links, ORCID, and general settings. |
+| `_pages/` | Content for the main website sections. |
+| `_courses/` | One page per course, including course details and materials. |
+| `_projects/` | One page per research project. |
+| `_includes/`, `_layouts/`, `_sass/` | Components, templates, and styles. |
+| `assets/img/` | Profile photo, project images, and CV page previews. |
+| `assets/pdf/daniel-saavedra-cv.pdf` | Downloadable CV. |
+| `assets/pdf/presentations/` | Presentation PDFs; each added PDF appears under **Presentations**. |
+| `assets/pdf/courses/<course_slug>/` | Course PDFs; each added PDF appears on the relevant course page. |
+| `.github/workflows/deploy.yml` | Automatic build and deployment to the `gh-pages` branch. |
 
-Las publicaciones y los repositorios mostrados en la web son listas editadas en `_pages/publications.md` y `_pages/repositories.md`; no se sincronizan automáticamente con ORCID o GitHub.
+Publications and repositories are maintained manually in `_pages/publications.md` and `_pages/repositories.md`. They do not sync automatically with ORCID or GitHub.
 
-## Tutorial: crear tu propia web a partir de este repositorio
+## Tutorial: create your own website from this repository
 
-No se necesita la herramienta `gh`: Git y la interfaz web de GitHub son suficientes.
+You only need Git and the GitHub website; the `gh` command-line tool is optional.
 
-### 1. Obtener una copia
+### 1. Download a copy
 
-En [este repositorio](https://github.com/dlsaavedra/dlsaavedra.github.io), selecciona **Code → Download ZIP** y descomprime el archivo. La copia descargada no incluye el historial de Git del sitio original.
+On [this repository's page](https://github.com/dlsaavedra/dlsaavedra.github.io), select **Code → Download ZIP** and extract the archive. This gives you the files without the original site's Git history.
 
-En GitHub, crea un repositorio vacío llamado **`TU_USUARIO.github.io`**, sustituyendo `TU_USUARIO` por tu nombre de usuario real. No marques las opciones para crear README, `.gitignore` o licencia: esos archivos ya están en la copia. Ese nombre permite publicar el sitio en `https://TU_USUARIO.github.io/`.
+On GitHub, create an empty repository named **`YOUR_USERNAME.github.io`**, replacing `YOUR_USERNAME` with your GitHub username. Do not select the options to add a README, `.gitignore`, or license; the downloaded files already include them. This repository name gives you the site URL `https://YOUR_USERNAME.github.io/`.
 
-### 2. Sustituir la información personal
+### 2. Replace personal information
 
-Antes de publicar, revisa estos archivos:
+Before publishing, review these files:
 
-1. En `_config.yml`, cambia `first_name`, `last_name`, `email`, `url`, `github_username`, `orcid_id` y los demás enlaces sociales. Para un repositorio `TU_USUARIO.github.io`, usa `url: https://TU_USUARIO.github.io` y deja `baseurl` vacío.
-2. En `_pages/about.md`, cambia la biografía, el foco de investigación y la fotografía. Sustituye la imagen referida allí, actualmente `assets/img/daniel-saavedra.jpg`.
-3. En `_pages/cv.md`, cambia el enlace al PDF y las imágenes de vista previa. Sustituye `assets/pdf/daniel-saavedra-cv.pdf`. La vista actual muestra **dos imágenes de página**; si tu CV tiene otro número de páginas, genera una imagen por página y ajusta las etiquetas `<img>` de `_pages/cv.md`.
-4. Edita `_pages/publications.md`, `_pages/repositories.md` y `_pages/teaching.md` con tus propios datos. Revisa también `_courses/` y `_projects/`, pues contienen información académica de este sitio.
-5. Sustituye o elimina archivos personales que no vayas a usar en `assets/img/` y `assets/pdf/`. Actualiza este README para describir tu versión.
+1. In `_config.yml`, update `first_name`, `last_name`, `email`, `url`, `github_username`, `orcid_id`, and the other social links. For a `YOUR_USERNAME.github.io` repository, set `url: https://YOUR_USERNAME.github.io` and leave `baseurl` empty.
+2. In `_pages/about.md`, replace the biography, research focus, and profile photo. The current photo is `assets/img/daniel-saavedra.jpg`.
+3. In `_pages/cv.md`, update the PDF link and preview images. Replace `assets/pdf/daniel-saavedra-cv.pdf`. The current preview displays **two page images**; if your CV has a different page count, generate one image per page and adjust the `<img>` elements in `_pages/cv.md`.
+4. Update `_pages/publications.md`, `_pages/repositories.md`, and `_pages/teaching.md` with your own information. Review `_courses/` and `_projects/`, which contain the current site's academic content.
+5. Replace or remove personal files you do not need from `assets/img/` and `assets/pdf/`. Update this README to describe your version of the site.
 
-### 3. Añadir contenido
+### 3. Add content
 
-- **Presentaciones:** guarda archivos `.pdf` en `assets/pdf/presentations/`. El nombre del archivo se convierte en el texto del enlace; utiliza nombres claros, por ejemplo `bayesian-extremes-2026.pdf`.
-- **Materiales de cursos:** cada archivo de `_courses/` declara un `course_slug`. Guarda sus PDF en `assets/pdf/courses/<course_slug>/`. La página del curso los listará automáticamente.
-- **Cursos nuevos:** crea una página Markdown en `_courses/` con `layout: page`, `title`, `institution`, `period`, `order` y `course_slug`; añade `{% raw %}{% include course_materials.html slug=page.course_slug %}{% endraw %}` donde quieras mostrar sus materiales.
-- **Proyectos nuevos:** crea una página Markdown en `_projects/` con `layout: page`, `title`, `description`, `img` e `importance`; guarda su imagen en `assets/img/projects/`. La página **Current Projects** ordena las tarjetas por `importance`.
-- **Pestañas:** se definen en `_pages/`. Sus campos `nav` y `nav_order` controlan si aparecen en el menú y su orden.
+- **Presentations:** place `.pdf` files in `assets/pdf/presentations/`. Filenames become link labels, so use descriptive names such as `bayesian-extremes-2026.pdf`.
+- **Course materials:** each file in `_courses/` declares a `course_slug`. Place its PDFs in `assets/pdf/courses/<course_slug>/`; they will appear automatically on that course's page.
+- **New courses:** create a Markdown page in `_courses/` with `layout: page`, `title`, `institution`, `period`, `order`, and `course_slug`. Add `{% raw %}{% include course_materials.html slug=page.course_slug %}{% endraw %}` where the materials list should appear.
+- **New projects:** create a Markdown page in `_projects/` with `layout: page`, `title`, `description`, `img`, and `importance`. Store its image in `assets/img/projects/`. **Current Projects** sorts its cards by `importance`.
+- **Navigation:** the main pages are in `_pages/`. Their `nav` and `nav_order` fields control visibility and order in the menu.
 
-### 4. Vista local opcional
+### 4. Preview locally (optional)
 
-Instala Ruby y Bundler, entra en la carpeta descomprimida y ejecuta:
+Install Ruby and Bundler, open a terminal in the extracted directory, and run:
 
 ```bash
 bundle install
 bundle exec jekyll serve
 ```
 
-Abre `http://localhost:4000/`. Este proyecto usa complementos de Jekyll que pueden requerir dependencias adicionales del sistema; la configuración de `.github/workflows/deploy.yml` muestra las herramientas utilizadas para la compilación publicada. Consulta también la [guía oficial de Jekyll](https://jekyllrb.com/docs/) si necesitas preparar Ruby en tu sistema.
+Open `http://localhost:4000/`. Some Jekyll plugins in this repository may require additional system dependencies. See `.github/workflows/deploy.yml` for the tools used by the published build, or consult the [official Jekyll guide](https://jekyllrb.com/docs/) for Ruby setup.
 
-### 5. Publicar en GitHub
+### 5. Publish on GitHub
 
-Dentro de la carpeta descomprimida, después de reemplazar los datos personales:
+In the extracted directory, after replacing the personal information, run:
 
 ```bash
 git init
 git branch -M main
 git add .
 git commit -m "Create my academic website"
-git remote add origin https://github.com/TU_USUARIO/TU_USUARIO.github.io.git
+git remote add origin https://github.com/YOUR_USERNAME/YOUR_USERNAME.github.io.git
 git push -u origin main
 ```
 
-La acción de `.github/workflows/deploy.yml` compila el sitio tras cada envío a `main` o `master` y coloca el resultado en `gh-pages`. Cuando exista esa rama, en el repositorio de GitHub ve a **Settings → Pages → Build and deployment** y selecciona **Deploy from a branch → `gh-pages` → `/(root)`**. Revisa la pestaña **Actions** para ver si la compilación terminó correctamente. La [documentación de GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) explica esta configuración.
+The workflow in `.github/workflows/deploy.yml` builds the site after each push to `main` or `master` and writes the result to `gh-pages`. Once that branch exists, open **Settings → Pages → Build and deployment** in your GitHub repository and select **Deploy from a branch → `gh-pages` → `/(root)`**. Check **Actions** to confirm that the build completed. See the [GitHub Pages publishing guide](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) for details.
 
-Si usas un nombre de repositorio distinto de `TU_USUARIO.github.io`, cambia `baseurl` en `_config.yml` a `/<nombre-del-repositorio>` y comprueba que los enlaces e imágenes se vean bien bajo esa ruta.
+If your repository has a name other than `YOUR_USERNAME.github.io`, set `baseurl` in `_config.yml` to `/<repository-name>` and check that links and images work under that path.
 
-## Recomendaciones
+## Recommendations
 
-- Sustituye el CV, la fotografía y los enlaces personales antes del primer `git push`: GitHub Pages publica el contenido del sitio de forma abierta.
-- Usa nombres de archivo sin espacios ni tildes para PDF e imágenes; serán parte de las URL.
-- Mantén los PDF de cada curso en su carpeta y revisa sus enlaces después de añadirlos.
-- Comprueba en **Actions** que la compilación termine antes de diagnosticar un cambio que aún no aparece en la web.
-- Conserva `LICENSE` y la atribución al tema [al-folio](https://github.com/alshedivat/al-folio) al reutilizar el código. El archivo `LICENSE` contiene su licencia MIT.
+- Replace the CV, photo, and personal links before your first `git push`: the GitHub Pages site is publicly accessible.
+- Use filenames without spaces or accented characters for PDFs and images, since filenames become part of URLs.
+- Keep each course's PDFs in its own folder and review the links after adding files.
+- Check **Actions** for a completed build before troubleshooting a change that has not appeared on the website.
+- Keep `LICENSE` and the attribution to [al-folio](https://github.com/alshedivat/al-folio) when reusing the code. The `LICENSE` file contains its MIT license.
