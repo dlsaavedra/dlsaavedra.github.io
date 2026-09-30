@@ -4,10 +4,10 @@
   {% for presentation in presentations %}
     <li>
       <strong>{{ presentation.title | escape }}</strong> — {{ presentation.event | escape }}
-      (<a href="{{ presentation.pdf_url | relative_url }}" aria-label="PDF for {{ presentation.title | escape }}">PDF</a>)
+      {% if presentation.pdf_url %}(<a href="{{ presentation.pdf_url | relative_url }}" aria-label="PDF for {{ presentation.title | escape }}">PDF</a>){% endif %}
     </li>
   {% endfor %}
 </ul>
 {% else %}
-<p>Presentations will be added here.</p>
+<p>{% if include.category == 'attendance' %}Asistencias por agregar.{% else %}Presentations will be added here.{% endif %}</p>
 {% endif %}

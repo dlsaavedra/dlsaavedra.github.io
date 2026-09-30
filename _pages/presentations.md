@@ -2,7 +2,7 @@
 layout: page
 permalink: /presentations/
 title: Talks & Presentations
-description: Conference presentations, seminars, invited talks, and posters
+description: Conference presentations, seminars, attendance at schools and congresses, and posters
 nav: true
 nav_order: 5
 ---
@@ -15,9 +15,9 @@ nav_order: 5
 
 {% include presentation_section.html category='seminars' %}
 
-## Invited Talks
+## Asistencia en Escuelas/congresos
 
-{% include presentation_section.html category='invited-talks' %}
+{% include presentation_section.html category='attendance' %}
 
 ## Posters
 

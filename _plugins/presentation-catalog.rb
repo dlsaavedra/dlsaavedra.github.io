@@ -9,7 +9,7 @@ module Jekyll
     priority :low
 
     ROOT = File.join('assets', 'pdf', 'presentations').freeze
-    CATEGORIES = %w[conferences seminars invited-talks posters].freeze
+    CATEGORIES = %w[conferences seminars attendance posters].freeze
 
     def generate(site)
       catalog = CATEGORIES.each_with_object({}) { |category, result| result[category] = [] }
@@ -41,21 +41,28 @@ module Jekyll
           event = metadata['event'].to_s.strip
           title = metadata['title'].to_s.strip
           pdf_name = metadata['pdf'].to_s.strip
-          pdf_path = File.join(entry_path, pdf_name)
-
-          unless !event.empty? && !title.empty? && pdf_name == File.basename(pdf_name) &&
-                 pdf_name.downcase.end_with?('.pdf') && File.file?(pdf_path) && !File.symlink?(pdf_path)
-            Jekyll.logger.warn 'Presentations:', "Complete event, title, and a PDF in #{entry_path}"
+          unless !event.empty? && !title.empty? && (category == 'attendance' || !pdf_name.empty?)
+            Jekyll.logger.warn 'Presentations:', "Complete event, title, and any required PDF in #{entry_path}"
             next
           end
 
-          relative_pdf_path = Pathname.new(pdf_path)
-                                      .relative_path_from(Pathname.new(site.source)).to_s
-          catalog.fetch(category) << {
+          entry = {
             'event' => event,
             'title' => title,
-            'pdf_url' => "/#{relative_pdf_path}",
           }
+          unless pdf_name.empty?
+            pdf_path = File.join(entry_path, pdf_name)
+            unless pdf_name == File.basename(pdf_name) && pdf_name.downcase.end_with?('.pdf') &&
+                   File.file?(pdf_path) && !File.symlink?(pdf_path)
+              Jekyll.logger.warn 'Presentations:', "Invalid PDF in #{entry_path}"
+              next
+            end
+
+            relative_pdf_path = Pathname.new(pdf_path)
+                                        .relative_path_from(Pathname.new(site.source)).to_s
+            entry['pdf_url'] = "/#{relative_pdf_path}"
+          end
+          catalog.fetch(category) << entry
         end
       end
 

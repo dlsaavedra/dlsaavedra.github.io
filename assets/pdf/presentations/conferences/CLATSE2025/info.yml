@@ -1,5 +1,5 @@
-# Copia esta carpeta dentro de conferences, seminars, invited-talks o posters.
-# Cambia estos datos y coloca el PDF en esta misma carpeta.
+# Copia esta carpeta dentro de conferences, seminars, attendance o posters.
+# Cambia estos datos y coloca el PDF en esta carpeta; solo para attendance es opcional.
 event: "XVI Congreso Latinoamericano de Sociedades de Estadística"
 title: "Bayesian Model Selection for Heavy-Tailed Data"
 pdf: "Presentacion_CLATSE2025.pdf"

@@ -1,5 +1,5 @@
-# Copia esta carpeta dentro de conferences, seminars, invited-talks o posters.
-# Cambia estos datos y coloca el PDF en esta misma carpeta.
+# Copia esta carpeta dentro de conferences, seminars, attendance o posters.
+# Cambia estos datos y coloca el PDF en esta carpeta; solo para attendance es opcional.
 event: "XLVII Jornada Nacional de Estadística 2024"
 title: "Generate Censored Samples: Controlling censorship percentage"
 pdf: "Poster_Rcens.pdf"
