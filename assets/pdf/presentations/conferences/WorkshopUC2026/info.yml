@@ -2,4 +2,4 @@
 # Cambia estos datos y coloca el PDF en esta carpeta; solo para attendance es opcional.
 event: "Workshop on Statistical Modeling and Data Science 2026"
 title: "Event organizer"
-pdf: "Img2.jpg"
+file: "Img2.jpg"
