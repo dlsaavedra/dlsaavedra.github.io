@@ -1,0 +1,13 @@
+{% assign presentations = site.data.presentation_catalog[include.category] %}
+{% if presentations.size > 0 %}
+<ul>
+  {% for presentation in presentations %}
+    <li>
+      <strong>{{ presentation.title | escape }}</strong> — {{ presentation.event | escape }}
+      (<a href="{{ presentation.pdf_url | relative_url }}" aria-label="PDF for {{ presentation.title | escape }}">PDF</a>)
+    </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>Presentations will be added here.</p>
+{% endif %}

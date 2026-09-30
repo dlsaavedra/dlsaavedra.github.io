@@ -1,0 +1,5 @@
+# Copia esta carpeta dentro de conferences, seminars, invited-talks o posters.
+# Cambia estos datos y coloca el PDF en esta misma carpeta.
+event: "Nombre de la conferencia, seminario o institución"
+title: "Título de la presentación o póster"
+pdf: "presentacion.pdf"
