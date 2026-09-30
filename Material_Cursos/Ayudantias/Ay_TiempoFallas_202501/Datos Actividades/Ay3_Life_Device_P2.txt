@@ -1,0 +1,12 @@
+Lower	Upper	Status	Devices	Temperature
+1536	1536	Right Censored	50	150
+1536	1536	Right Censored	50	175
+96	96	Right Censored	50	200
+384	788	Failed	1	250
+788	1536	Failed	3	250
+1536	2304	Failed	5	250
+2304	2304	Right Censored	41	250
+192	384	Failed	4	300
+384	788	Failed	27	300
+788	1536	Failed	16	300
+1536	1536	Right Censored	3	300
