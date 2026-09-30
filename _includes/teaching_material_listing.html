@@ -1,0 +1,28 @@
+<nav aria-label="Breadcrumb">
+  {% for crumb in page.material_breadcrumbs %}
+    <a href="{{ crumb.url | relative_url }}">{{ crumb.name | escape }}</a> /
+  {% endfor %}
+  <span aria-current="page">{{ page.title | escape }}</span>
+</nav>
+
+{% if page.material_folders.size > 0 %}
+<h2>Folders</h2>
+<ul>
+  {% for folder in page.material_folders %}
+    <li><a href="{{ folder.url | relative_url }}">{{ folder.name | escape }}</a></li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+{% if page.material_files.size > 0 %}
+<h2>Files</h2>
+<ul>
+  {% for file in page.material_files %}
+    <li><a href="{{ file.url | relative_url }}">{{ file.name | escape }}</a></li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+{% if page.material_folders.size == 0 and page.material_files.size == 0 %}
+<p>Materials will be added here.</p>
+{% endif %}

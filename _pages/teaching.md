@@ -9,24 +9,16 @@ nav_order: 6
 
 ## Courses taught
 
-Each course links to a page for its PDF materials.
-
-{% assign courses = site.courses | sort: 'order' %}
 <ul>
-{% for course in courses %}
-  <li><a href="{{ course.url | relative_url }}">{{ course.title }}</a> — {{ course.institution }} ({{ course.period }})</li>
+{% for course in site.data.teaching_courses.docencia %}
+  <li><a href="{{ course.url | relative_url }}">{{ course.title | escape }}</a>{% if course.details != empty %} — {{ course.details | escape }}{% endif %}</li>
 {% endfor %}
 </ul>
 
 ## Teaching assistantships
 
-Pontificia Universidad Católica de Chile, Schools of Engineering and Mathematics (2014–2019):
-
-- Calculus
-- Differential Equations
-- Probabilistic Models
-- Statistical Inference
-- Stochastic Models
-- Image Processing
-- Pattern Recognition
-- Specialization Project
+<ul>
+{% for course in site.data.teaching_courses.ayudantias %}
+  <li><a href="{{ course.url | relative_url }}">{{ course.title | escape }}</a>{% if course.details != empty %} — {{ course.details | escape }}{% endif %}</li>
+{% endfor %}
+</ul>
