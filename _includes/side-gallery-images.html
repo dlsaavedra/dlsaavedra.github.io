@@ -1,0 +1,13 @@
+{%- assign image_extensions = 'jpg,jpeg,png,webp,gif,avif' | split: ',' -%}
+{%- assign image_number = 0 -%}
+{%- for photo in include.images -%}
+  {%- assign folder = photo.path | remove_first: '/' | split: '/' | first -%}
+  {%- assign extension = photo.extname | remove_first: '.' | downcase -%}
+  {%- if folder == 'img_back' and image_extensions contains extension -%}
+    {%- assign column = image_number | modulo: 2 -%}
+    {%- if column == include.side -%}
+      <img src="{{ photo.path | relative_url }}" alt="" loading="lazy">
+    {%- endif -%}
+    {%- assign image_number = image_number | plus: 1 -%}
+  {%- endif -%}
+{%- endfor -%}

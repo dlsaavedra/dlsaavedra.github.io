@@ -15,8 +15,14 @@
     <!-- Header -->
     {%- include header.html %}
 
-    <!-- Content -->
-    <div class="container mt-5">
+    <!-- Content and photographs discovered in img_back -->
+    {%- assign gallery_images = site.static_files | sort: 'path' -%}
+    <div class="page-with-gallery">
+      <div class="side-gallery side-gallery-left" aria-hidden="true">
+        {% include side-gallery-images.html side=0 images=gallery_images %}
+      </div>
+
+      <div class="container mt-5">
       {% if page.toc and page.toc.sidebar %}
         {% if page.toc.sidebar == "right" %}
         <div class="row">
@@ -44,6 +50,11 @@
       {% else %}
         {{ content }}
       {% endif %}
+      </div>
+
+      <div class="side-gallery side-gallery-right" aria-hidden="true">
+        {% include side-gallery-images.html side=1 images=gallery_images %}
+      </div>
     </div>
 
     <!-- Footer -->
