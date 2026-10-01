@@ -11,7 +11,9 @@ profile:
   address: >
     <p><a href="mailto:dlsaavedra@uc.cl">dlsaavedra@uc.cl</a></p>
     <p><a href="https://orcid.org/0000-0002-5084-6843">ORCID</a></p>
-
+    <p><a href="https://scholar.google.com/citations?hl=en&user=YoLqqv0AAAAJ">Schoolar</a></p>
+    <p><a href="https://www.linkedin.com/in/dlsaavedramorales/">LinkedIn</a></p>
+    
 news: false
 latest_posts: false
 selected_papers: false
