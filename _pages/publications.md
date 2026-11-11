@@ -10,10 +10,10 @@ These works are listed in my [ORCID record](https://orcid.org/0000-0002-5084-684
 
 ## Journal articles
 
-- **Sampling with censored data: a practical guide**. *Journal of Statistical Computation and Simulation* (2024). [DOI: 10.1080/00949655.2024.2409379](https://doi.org/10.1080/00949655.2024.2409379).
-- **Target Detection by Target Simulation in X-ray Testing**. *Journal of Nondestructive Evaluation* (2022). [DOI: 10.1007/s10921-022-00851-8](https://doi.org/10.1007/s10921-022-00851-8).
-- **X-Ray Baggage Inspection With Computer Vision: A Survey**. *IEEE Access* (2020). [DOI: 10.1109/ACCESS.2020.3015014](https://doi.org/10.1109/ACCESS.2020.3015014).
-- **Detection of threat objects in baggage inspection with X-ray images using deep learning**. *Neural Computing and Applications* (2020). [DOI: 10.1007/s00521-020-05521-2](https://doi.org/10.1007/s00521-020-05521-2).
+- **Sampling with censored data: a practical guide**. Pedro L. Ramos, Daniel C. F. Guzman, Alex L. Mota, **Daniel A. Saavedra**, Francisco A. Rodrigues and Francisco Louzada. *Journal of Statistical Computation and Simulation* (2024). [DOI: 10.1080/00949655.2024.2409379](https://doi.org/10.1080/00949655.2024.2409379).
+- **Target Detection by Target Simulation in X-ray Testing**. Domingo Mery, Alejandro Kaminetzky, Laurence Golborne, Susana Figueroa and **Daniel Saavedra**. *Journal of Nondestructive Evaluation* (2022). [DOI: 10.1007/s10921-022-00851-8](https://doi.org/10.1007/s10921-022-00851-8).
+- **X-Ray Baggage Inspection With Computer Vision: A Survey**. Domingo Mery, **Daniel Saavedra** and Mukesh Prasad. *IEEE Access* (2020). [DOI: 10.1109/ACCESS.2020.3015014](https://doi.org/10.1109/ACCESS.2020.3015014).
+- **Detection of threat objects in baggage inspection with X-ray images using deep learning**. **Daniel Saavedra**, Sandipan Banerjee and Domingo Mery. *Neural Computing and Applications* (2020). [DOI: 10.1007/s00521-020-05521-2](https://doi.org/10.1007/s00521-020-05521-2).
 
 ## Software and thesis
 
