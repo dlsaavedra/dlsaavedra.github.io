@@ -4,7 +4,7 @@
   {% for presentation in presentations %}
     <li>
       <strong>{{ presentation.title | escape }}</strong> — {{ presentation.event | escape }}
-      {% if presentation.attachment_url %}(<a href="{{ presentation.attachment_url | relative_url }}" aria-label="{{ presentation.attachment_label }} for {{ presentation.title | escape }}">{{ presentation.attachment_label }}</a>){% endif %}
+      {% if presentation.attachments.size > 0 %}({% for attachment in presentation.attachments %}{% unless forloop.first %}, {% endunless %}<a href="{{ attachment.url | relative_url }}" aria-label="{{ attachment.label }}{% if presentation.attachments.size > 1 %} {{ forloop.index }}{% endif %} for {{ presentation.title | escape }}">{{ attachment.label }}{% if presentation.attachments.size > 1 %} {{ forloop.index }}{% endif %}</a>{% endfor %}){% endif %}
     </li>
   {% endfor %}
 </ul>

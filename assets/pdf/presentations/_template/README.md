@@ -6,3 +6,11 @@
 4. Sube la carpeta a GitHub. La entrada aparecerá al terminar la publicación de la web.
 
 Cada carpeta representa una sola presentación, póster o asistencia.
+
+Para enlazar varios archivos, sustituye `pdf:` o `file:` por una lista:
+
+```yaml
+files:
+  - "foto1.jpg"
+  - "foto2.jpg"
+```

@@ -48,9 +48,16 @@ module Jekyll
 
           event = metadata['event'].to_s.strip
           title = metadata['title'].to_s.strip
-          attachment_name = metadata['file'].to_s.strip
-          attachment_name = metadata['pdf'].to_s.strip if attachment_name.empty?
-          unless !event.empty? && !title.empty? && (category == 'attendance' || !attachment_name.empty?)
+          if metadata.key?('files') && !metadata['files'].is_a?(Array)
+            Jekyll.logger.warn 'Presentations:', "Files must be a list in #{entry_path}"
+            next
+          end
+          attachment_names = if metadata.key?('files')
+                               metadata['files'].map { |name| name.to_s.strip }
+                             else
+                               [metadata['file'].to_s.strip, metadata['pdf'].to_s.strip].reject(&:empty?).first(1)
+                             end
+          unless !event.empty? && !title.empty? && (category == 'attendance' || !attachment_names.empty?)
             Jekyll.logger.warn 'Presentations:', "Complete event, title, and any required attachment in #{entry_path}"
             next
           end
@@ -60,20 +67,24 @@ module Jekyll
             'title' => title,
             '_sort_date' => sort_date_for(metadata['date'], folder_name, event),
           }
-          unless attachment_name.empty?
+          attachments = []
+          valid_attachments = attachment_names.all? do |attachment_name|
             attachment_path = File.join(entry_path, attachment_name)
             attachment_type = ATTACHMENT_TYPES[File.extname(attachment_name).downcase]
             unless attachment_name == File.basename(attachment_name) && attachment_type &&
                    File.file?(attachment_path) && !File.symlink?(attachment_path)
               Jekyll.logger.warn 'Presentations:', "Invalid attachment in #{entry_path}"
-              next
+              next false
             end
 
             relative_attachment_path = Pathname.new(attachment_path)
                                                .relative_path_from(Pathname.new(site.source)).to_s
-            entry['attachment_url'] = "/#{relative_attachment_path}"
-            entry['attachment_label'] = attachment_type
+            attachments << { 'url' => "/#{relative_attachment_path}", 'label' => attachment_type }
+            true
           end
+          next unless valid_attachments
+
+          entry['attachments'] = attachments
           catalog.fetch(category) << entry
         end
 
