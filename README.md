@@ -11,7 +11,7 @@ Source code for [dlsaavedra.github.io](https://dlsaavedra.github.io/), an academ
 | **Publications** | A publication list and a link to the ORCID record. |
 | **Repositories** | Selected public GitHub repositories and R packages. |
 | **Current Projects** | Three research projects with images, descriptions, and mathematical formulations. |
-| **Presentations** | Links to presentation PDFs, displayed when files are added to the corresponding folder. |
+| **Talks & Presentations** | Conference presentations, seminars, attendance, and posters. |
 | **Teaching** | Courses taught, course pages with PDF materials, and teaching assistantships. |
 
 ## Repository guide
@@ -20,16 +20,21 @@ Source code for [dlsaavedra.github.io](https://dlsaavedra.github.io/), an academ
 | --- | --- |
 | `_config.yml` | Name, site URL, email, social links, ORCID, and general settings. |
 | `_pages/` | Content for the main website sections. |
-| `_courses/` | One page per course, including course details and materials. |
+| `_courses/` | Legacy course pages; the Teaching listing is generated from `assets/Material_Cursos/`. |
 | `_projects/` | One page per research project. |
 | `_includes/`, `_layouts/`, `_sass/` | Components, templates, and styles. |
 | `assets/img/` | Profile photo, project images, and CV page previews. |
 | `assets/pdf/daniel-saavedra-cv.pdf` | Downloadable CV. |
-| `assets/pdf/presentations/` | Presentation PDFs; each added PDF appears under **Presentations**. |
-| `assets/pdf/courses/<course_slug>/` | Course PDFs; each added PDF appears on the relevant course page. |
+| `img_back/` | Images for the side galleries. |
+| `assets/pdf/presentations/` | Presentation folders grouped by category, with metadata and an attachment. |
+| `assets/Material_Cursos/Docencia/` | One folder per course taught, containing `descript.txt` and material folders. |
+| `assets/Material_Cursos/Ayudantias/` | One folder per assistantship, containing `descript.txt` and material folders. |
+| `_plugins/teaching-materials.rb`, `_plugins/presentation-catalog.rb` | Generate the Teaching and Talks & Presentations listings. |
 | `.github/workflows/deploy.yml` | Automatic build and deployment to the `gh-pages` branch. |
 
 Publications and repositories are maintained manually in `_pages/publications.md` and `_pages/repositories.md`. They do not sync automatically with ORCID or GitHub.
+
+![Repository structure and where to add content](assets/img/repository-guide.svg)
 
 ## Tutorial: create your own website from this repository
 
@@ -53,9 +58,9 @@ Before publishing, review these files:
 
 ### 3. Add content
 
-- **Presentations:** place `.pdf` files in `assets/pdf/presentations/`. Filenames become link labels, so use descriptive names such as `bayesian-extremes-2026.pdf`.
-- **Course materials:** each file in `_courses/` declares a `course_slug`. Place its PDFs in `assets/pdf/courses/<course_slug>/`; they will appear automatically on that course's page.
-- **New courses:** create a Markdown page in `_courses/` with `layout: page`, `title`, `institution`, `period`, `order`, and `course_slug`. Add `{% raw %}{% include course_materials.html slug=page.course_slug %}{% endraw %}` where the materials list should appear.
+- **Presentations:** copy `assets/pdf/presentations/_template/` into `conferences/`, `seminars/`, `attendance/` or `posters/`. Edit `info.yml` and add the PDF or image to the copied folder. Set `date` for precise ordering; an attachment is optional for attendance.
+- **Teaching:** add a folder under `assets/Material_Cursos/Docencia/` or `assets/Material_Cursos/Ayudantias/`. Put its title and details in `descript.txt` and add material in subfolders. The listing and material pages are generated during publication.
+- **Side galleries:** add images to `img_back/` and publish the repository changes.
 - **New projects:** create a Markdown page in `_projects/` with `layout: page`, `title`, `description`, `img`, and `importance`. Store its image in `assets/img/projects/`. **Current Projects** sorts its cards by `importance`.
 - **Navigation:** the main pages are in `_pages/`. Their `nav` and `nav_order` fields control visibility and order in the menu.
 

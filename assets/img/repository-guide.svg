@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Website repository guide</title>
+  <desc id="desc">Where to add teaching materials, presentations, gallery images, and page content.</desc>
+  <rect width="1200" height="760" rx="24" fill="#f5f7fb"/>
+  <text x="55" y="68" font-family="Arial,sans-serif" font-size="32" font-weight="700" fill="#172b4d">Website content: where to add files</text>
+  <text x="55" y="99" font-family="Arial,sans-serif" font-size="18" fill="#53657c">Upload changes to GitHub; the website updates after the build finishes.</text>
+  <g font-family="Arial,sans-serif">
+    <rect x="45" y="130" width="540" height="275" rx="16" fill="#fff" stroke="#d6e0ee"/>
+    <text x="70" y="169" font-size="23" font-weight="700" fill="#185b9d">Teaching</text>
+    <text x="70" y="204" font-size="16" fill="#172b4d">assets/Material_Cursos/</text>
+    <text x="92" y="234" font-size="16" fill="#172b4d">├─ Docencia/  →  courses taught</text>
+    <text x="92" y="262" font-size="16" fill="#172b4d">└─ Ayudantias/  →  assistantships</text>
+    <text x="70" y="306" font-size="16" fill="#53657c">In each category, add a folder for each course.</text>
+    <text x="70" y="334" font-size="16" fill="#53657c">Add descript.txt with its title and details, then</text>
+    <text x="70" y="362" font-size="16" fill="#53657c">place files in material subfolders.</text>
+    <rect x="615" y="130" width="540" height="275" rx="16" fill="#fff" stroke="#d6e0ee"/>
+    <text x="640" y="169" font-size="23" font-weight="700" fill="#7a3b9b">Talks &amp; Presentations</text>
+    <text x="640" y="204" font-size="16" fill="#172b4d">assets/pdf/presentations/</text>
+    <text x="662" y="234" font-size="16" fill="#172b4d">├─ conferences/  ├─ seminars/</text>
+    <text x="662" y="262" font-size="16" fill="#172b4d">└─ attendance/   └─ posters/</text>
+    <text x="640" y="306" font-size="16" fill="#53657c">Copy _template/ into a category; edit info.yml</text>
+    <text x="640" y="334" font-size="16" fill="#53657c">and add the PDF or image. Add a date for sorting.</text>
+    <text x="640" y="362" font-size="16" fill="#53657c">Attendance entries can omit an attachment.</text>
+    <rect x="45" y="430" width="540" height="235" rx="16" fill="#fff" stroke="#d6e0ee"/>
+    <text x="70" y="470" font-size="23" font-weight="700" fill="#237d67">Images and CV</text>
+    <text x="70" y="509" font-size="16" fill="#172b4d">img_back/  →  side gallery images</text>
+    <text x="70" y="542" font-size="16" fill="#172b4d">assets/img/  →  profile and project images</text>
+    <text x="70" y="575" font-size="16" fill="#172b4d">assets/pdf/daniel-saavedra-cv.pdf  →  CV</text>
+    <text x="70" y="608" font-size="16" fill="#172b4d">assets/img/cv/  →  CV preview images</text>
+    <rect x="615" y="430" width="540" height="235" rx="16" fill="#fff" stroke="#d6e0ee"/>
+    <text x="640" y="470" font-size="23" font-weight="700" fill="#b3611b">Text and projects</text>
+    <text x="640" y="509" font-size="16" fill="#172b4d">_pages/  →  biography, publications, links</text>
+    <text x="640" y="542" font-size="16" fill="#172b4d">_projects/  →  one Markdown file per project</text>
+    <text x="640" y="575" font-size="16" fill="#172b4d">_config.yml  →  site and contact settings</text>
+    <text x="640" y="618" font-size="16" fill="#53657c">See the repository guide for further details.</text>
+  </g>
+</svg>

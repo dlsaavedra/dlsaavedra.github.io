@@ -14,7 +14,7 @@ module Jekyll
       catalog = { 'docencia' => [], 'ayudantias' => [] }
 
       CATEGORIES.each do |folder_name, category|
-        category_path = File.join(site.source, 'Material_Cursos', folder_name)
+        category_path = File.join(site.source, 'assets', 'Material_Cursos', folder_name)
         next unless Dir.exist?(category_path)
 
         course_names = visible_entries(category_path).select do |name|
